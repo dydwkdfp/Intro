@@ -6,44 +6,35 @@ import {Nav,
     MobileIcon,
     NavMenu,
     NavItem,
-    NavLinks,
-    NavBtn,
-    NavBtnLink} from './NavbarElements';
+    NavLinks} from './NavbarElements';
 
 const Navbar = ({toggle}) => {
+
     return (
         <>
             <Nav>
                 <NavbarContainer>
-                    <NavLogo to='/'>Jaemin</NavLogo>
+                    <NavLogo to='/' >Jaemin</NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars/>
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="about">
+                            <NavLinks to="about" smooth={true} duration={500} spy={true}>
                                 About
                             </NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="discover">
-                                Discover
+                            <NavLinks to="skills" smooth={true} duration={500} spy={true}>
+                                Skills
                             </NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="services">
-                                Services
-                            </NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks to="signup">
-                                Sign Up
+                            <NavLinks to="portfolio" smooth={true} duration={500} spy={true}>
+                                portfolio
                             </NavLinks>
                         </NavItem>
                     </NavMenu>
-                    <NavBtn>
-                        <NavBtnLink to="/signin">Sign In</NavBtnLink>
-                    </NavBtn>
                 </NavbarContainer>
             </Nav>
         </>

@@ -5,11 +5,7 @@ import { IntroContainer,
     VideoBg,
     IntroContent,
     IntroH1,
-    IntroP,
-    ArrowForward,
-    IntroBtnWrapper,
-    ArrowRight } from './introElements';
-import {Button} from '../ButtonElement';
+    IntroP, } from './introElements';
 
 const IntroSection = () => {
     const [hover,setHover] = useState(false)
@@ -24,15 +20,10 @@ const IntroSection = () => {
                 <VideoBg autoPlay loop muted src={Video} type='video/mp4'/>
             </IntroBg>
             <IntroContent>
-                <IntroH1>Hi! I'm jaemin</IntroH1>
+                <IntroH1>Hi! I'm Jaemin</IntroH1>
                 <IntroP>
-                    I'm a front-end developer on responsive websites.
+                    I'm a remote front-end developer<br></br> on responsive websites.
                 </IntroP>
-                <IntroBtnWrapper>
-                    <Button to="signup" onMouseEnter={onHover} onMouseLeave={onHover} primary="true">
-                        Know more {hover ? <ArrowForward /> : <ArrowRight/>}
-                    </Button>
-                </IntroBtnWrapper>
             </IntroContent>
         </IntroContainer>
     )

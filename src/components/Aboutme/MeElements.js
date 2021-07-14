@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
-export const SkillContainer = styled.div`
+export const MeContainer = styled.div`
     color: #fff;
     background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
 
 `
 
-export const SkillWrapper = styled.div`
+export const MeWrapper = styled.div`
     display: grid;
     z-index: 1;
     height: 760px;
@@ -18,7 +18,7 @@ export const SkillWrapper = styled.div`
     justify-content: center;
 `
 
-export const SkillRow = styled.div`
+export const MeRow = styled.div`
     display: grid;
     grid-auto-columns: minmax(auto, 1fr);
     align-items: center;
@@ -76,4 +76,15 @@ export const Subtitle = styled.p`
     font-size: 18px;
     line-height: 24px;
     color: ${({darkText}) => (darkText ? '#010606' : '#fff')};
+`
+
+export const ImgWrap = styled.div`
+    max-width: 555px;
+    height: 100%
+`
+
+export const Img = styled.img`
+    width: 100%;
+    margin: 0 0 10px 0;
+    padding-right: 0;
 `

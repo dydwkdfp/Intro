@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
 import Navbar from '../components/Navbar';
-import Sidebar from '../components/Sidebar';
 import IntroSection from '../components/Intro';
 import SkillSection from '../components/Skill';
-import { homeObjOne } from '../components/Skill/Data';
+import MeSection from '../components/Aboutme';
+import { homeObjOne} from '../components/Aboutme/Data.js';
+import { homeObjTwo} from '../components/Skill/Data.js';
 
 const Home = () => {
     const [isOpen,setIsOpen] = useState(false)
@@ -14,10 +15,10 @@ const Home = () => {
 
     return (
         <>
-        <Sidebar isOpen={isOpen} toggle={toggle}/>
         <Navbar toggle={toggle}/>
         <IntroSection/>
-        <SkillSection{...homeObjOne} />
+        <MeSection{...homeObjOne} />
+        <SkillSection{...homeObjTwo} />
         </>
     )
 }
