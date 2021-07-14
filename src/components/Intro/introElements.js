@@ -12,7 +12,7 @@ export const IntroContainer = styled.div`
     position: relative;
     z-index: 1;
 
-    //add :before styles
+    add :before styles
 
     :before {
         content: '';

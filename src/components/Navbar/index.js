@@ -14,7 +14,7 @@ const Navbar = ({toggle}) => {
         <>
             <Nav>
                 <NavbarContainer>
-                    <NavLogo to='/' >Jaemin</NavLogo>
+                    <NavLogo to='home' smooth={true} duration={500} spy={true}>Jaemin</NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars/>
                     </MobileIcon>

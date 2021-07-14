@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
       display: 'flex',
       justifyContent: 'center',
       flexWrap: 'wrap',
+      maxWidth: '555px',
       '& > *': {
         margin: theme.spacing(0.5),
       },
