@@ -42,7 +42,6 @@ export const ProjectH1 = styled.h1`
         font-size: 32px;            
     }
 `
-
 export const ProjectCardContainer = styled.div`
     margin-top: 40px;
     display: flex;
@@ -50,4 +49,11 @@ export const ProjectCardContainer = styled.div`
     justify-content: center;
     flex-wrap: wrap;
 
+`
+export const CardH1 = styled.h1`
+font-size: 25px;
+`
+
+export const CardText = styled.text`
+    font-size: 15px;
 `

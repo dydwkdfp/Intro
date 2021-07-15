@@ -4,32 +4,44 @@ ProjectWrapper,
 ProjectContent,
 ProjectH1,
 ProjectCardContainer,
+CardH1,
+CardText,
 } from './ProjectsElements'
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, responsiveFontSizes } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
+import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Aos from "aos";
 import "aos/dist/aos.css";
+import ImageSlider from './ImageSlider';
+import {Project3Data} from './SliderData';
+
+
 
 const useStyles = makeStyles({
     root: {
-        minWidth: 275,
-        minHeight: 275,
+        minWidth: 400,
+        minHeight: 400,
         margin: '10px 10px',
     },
     cardC:{
+        display: 'flex',
+        flexWrap: 'wrap',
+        flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
     },
     cardA:{
         alignItems: 'flex-end',
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
+        margin: '0 30px',
     },
     title:{
-        textAlign: 'center',
+      fontsize: '30px',
+      textalign: 'center',
     },
     pos: {
         marginBottom: 12,
@@ -50,51 +62,48 @@ const Projects = () => {
                         {<br/>}My projects
                   </ProjectH1>
                   <ProjectCardContainer>
-
-
-
-    <Card className={classes.root}>
-      <CardContent className={classes.cardC}>
-        <Typography variant="h5" component="h2" className={classes.title}>
-          Project1
-        </Typography>
-        <Typography variant="body2" component="p" className={classes.title}>
-            {<br/>}this is about my 1st project
-        </Typography>
-      </CardContent>
-      <CardActions className={classes.cardA}>
-        <Button variant="contained" color="primary" size="small" className={classes.pos}>Learn More</Button>
-      </CardActions>
-    </Card>
-    <Card className={classes.root}>
-      <CardContent className={classes.cardC}>
-        <Typography variant="h5" component="h2" className={classes.title}>
-          Project2
-        </Typography>
-        <Typography variant="body2" component="p" className={classes.title}>
-            {<br/>}this is about my 2nd project
-        </Typography>
-      </CardContent>
-      <CardActions className={classes.cardA}>
-        <Button variant="contained" color="primary" size="small"  className={classes.pos}>Learn More</Button>
-      </CardActions>
-    </Card>
-    <Card className={classes.root}>
-      <CardContent className={classes.cardC}>
-        <Typography variant="h5" component="h2" className={classes.title}>
-          My portfolio
-        </Typography>
-        <Typography variant="body2" component="p" className={classes.title}>
-            {<br/>}Portfolio project.
-        </Typography>
-      </CardContent>
-      <CardActions className={classes.cardA}>
-        <Button variant="contained" color="primary" size="small" className={classes.pos}>Learn More</Button>
-      </CardActions>
-    </Card>
-
-
-
+                      <Card className={classes.root}>
+                       <CardContent className={classes.cardC}>
+                        <CardH1>
+                          Project 1
+                        </CardH1>
+                        <CardText>
+                         {<br/>}
+                         </CardText>
+                         <ImageSlider slides={Project3Data}/>
+                       </CardContent>
+                       <CardActions className={classes.cardA}>
+                         <Button variant="contained" color="primary" size="small" className={classes.pos}>Learn More</Button>
+                       </CardActions>
+                     </Card>
+                      <Card className={classes.root}>
+                       <CardContent className={classes.cardC}>
+                        <CardH1>
+                          Project 2
+                        </CardH1>
+                        <CardText>
+                         {<br/>}
+                         </CardText>
+                         <ImageSlider slides={Project3Data}/>
+                       </CardContent>
+                       <CardActions className={classes.cardA}>
+                         <Button variant="contained" color="primary" size="small" className={classes.pos}>Learn More</Button>
+                       </CardActions>
+                     </Card>
+                     <Card className={classes.root}>
+                       <CardContent className={classes.cardC}>
+                        <CardH1>
+                          My portfolio
+                        </CardH1>
+                        <CardText>
+                         {<br/>}
+                         </CardText>
+                         <ImageSlider slides={Project3Data}/>
+                       </CardContent>
+                       <CardActions className={classes.cardA}>
+                         <Button variant="contained" color="primary" size="small" className={classes.pos}>Learn More</Button>
+                       </CardActions>
+                     </Card>
                   </ProjectCardContainer>
               </ProjectContent>
               </div>
