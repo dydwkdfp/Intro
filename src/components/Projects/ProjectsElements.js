@@ -8,13 +8,14 @@ export const ProjectContainer = styled.div`
 export const ProjectWrapper = styled.div`
     display: grid;
     z-index: 1;
-    min-height: 550px;
+    min-height: 750px;
     width: 100%;
     max-width: 1100px;
+    padding-top: 100px;
     margin-right: auto;
     margin-left: auto;
     padding: 0 24px;
-    padding-bottom: 50px;
+    padding-bottom: 200px;
     justify-content: center;
     align-items: Flex;
 `

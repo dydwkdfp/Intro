@@ -15,8 +15,7 @@ const Footer = () => {
                         CONTACT
                     </FooterH1>
                     <FooterText>
-                        Contact me on..{<br/>}{<br/>}
-                        <MailIcon fontSize="Small"/> Codertest@gmail.com
+                        <MailIcon fontSize="Small"/> codingjaemin@gmail.com
                     </FooterText>
                 </FooterContent>
             </FooterWrapper>

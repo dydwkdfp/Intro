@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {makeStyles} from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import Chip from '@material-ui/core/Chip';
@@ -20,6 +20,8 @@ import htmlpic from "../../images/skills/html.png";
 import nodejspic from "../../images/skills/node.png";
 import reactpic from "../../images/skills/react.png";
 import csspic from "../../images/skills/css.png";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -47,6 +49,10 @@ const SkillSection = ({lightBg,
     descriptionfive,
     alt}) => {
         
+    useEffect(()=> {
+        Aos.init({duration:2000});
+    })
+
     const classes = useStyles();
 
     return (
@@ -55,6 +61,7 @@ const SkillSection = ({lightBg,
                 <SkillWrapper>
                     <SkillRow imgStart={imgStart}>
                         <Column1>
+                        <div data-aos="fade-left">
                         <TextWrapper>
                             <TopLine>
                                 {topLine}
@@ -66,8 +73,10 @@ const SkillSection = ({lightBg,
                                 {descriptionone}<br/>
                             </Subtitle>
                         </TextWrapper>
+                        </div>
                         </Column1>
                         <Column2>
+                        <div data-aos="fade-right">
                         <div className={classes.root}>
                             <Chip avatar={<Avatar alt="Javascript" src={javascriptpic}/>}
                                 label="Javascript"/>
@@ -83,6 +92,7 @@ const SkillSection = ({lightBg,
                                 label="React"/>
                             <Chip avatar={<Avatar alt="SQL" src={sqlpic}/>}
                                 label="SQL"/>
+                        </div>
                         </div>
                         </Column2>
                     </SkillRow>

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { MeContainer,
     MeWrapper,
     MeRow,
@@ -13,6 +13,8 @@ import { MeContainer,
 } from './MeElements'
 
 import Imgprog from "../../images/svg-1.svg"
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const MeSection = ({lightBg,
     id,
@@ -28,12 +30,16 @@ const MeSection = ({lightBg,
     descriptionfive,
     img,
     alt}) => {
+        useEffect(()=> {
+            Aos.init({duration:2000});
+        })
     return (
         <>
             <MeContainer lightBg={lightBg} id={id}>
                 <MeWrapper>
                     <MeRow imgStart={imgStart}>
                         <Column1>
+                        <div data-aos="fade-right">
                         <TextWrapper>
                             <TopLine>
                                 {topLine}
@@ -49,11 +55,14 @@ const MeSection = ({lightBg,
                                 {descriptionfive}<br/>
                             </Subtitle>
                         </TextWrapper>
+                        </div>
                         </Column1>
                         <Column2>
+                        <div data-aos="fade-left">
                         <ImgWrap>
                             <Img src={img} alt={alt}/>
                         </ImgWrap>
+                        </div>
                         </Column2>
                     </MeRow>
                 </MeWrapper>

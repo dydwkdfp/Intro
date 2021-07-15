@@ -9,8 +9,7 @@ export const SkillContainer = styled.div`
 export const SkillWrapper = styled.div`
     display: grid;
     z-index: 1;
-    min-height: 650px;
-    max-height: 750px;
+    min-height: 800px;
     width: 100%;
     max-width: 1100px;
     margin-right: auto;

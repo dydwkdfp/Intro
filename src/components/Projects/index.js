@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { ProjectContainer,
 ProjectWrapper,
 ProjectContent,
@@ -11,6 +11,8 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const useStyles = makeStyles({
     root: {
@@ -35,13 +37,17 @@ const useStyles = makeStyles({
 });
 
 const Projects = () => {
+  useEffect(()=> {
+      Aos.init({duration:2000});
+  })
     const classes = useStyles();
     return (
         <ProjectContainer id="portfolio">
             <ProjectWrapper>
+              <div data-aos="fade-up">
               <ProjectContent>
                   <ProjectH1>
-                        My projects
+                        {<br/>}My projects
                   </ProjectH1>
                   <ProjectCardContainer>
 
@@ -91,6 +97,7 @@ const Projects = () => {
 
                   </ProjectCardContainer>
               </ProjectContent>
+              </div>
             </ProjectWrapper>
         </ProjectContainer>
     )

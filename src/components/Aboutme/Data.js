@@ -7,7 +7,7 @@ export const homeObjOne = {
     lightTextDesc: true,
     topLine:'About Me',
     headline: "Jaemin Jang",
-    descriptionone: "i am jaemin, front-end developer from South Korea.",
+    descriptionone: "I am jaemin, front-end developer from South Korea.",
     descriptiontwo: " I have graduated 4 years of university majoring in computer science. Now i am living in Seoul (GMT +9)" ,
     descriptionthree: " I'm passionate and love to learn new stuff in coding." ,
     descriptionfour: " I have various experience on coding such as C MFC, Android, Arduinos." ,

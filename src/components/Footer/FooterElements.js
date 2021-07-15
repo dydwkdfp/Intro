@@ -12,13 +12,12 @@ export const FooterWrapper = styled.div`
     margin-right: auto;
     margin-left: auto;
     padding: 0 24px;
-    justify-content: center;
-    align-items: center;
 `
 
 export const FooterContent = styled.div`
     padding: 10px 24px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
 `
