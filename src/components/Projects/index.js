@@ -1,12 +1,4 @@
-import React,{useEffect} from 'react'
-import { ProjectContainer,
-ProjectWrapper,
-ProjectContent,
-ProjectH1,
-ProjectCardContainer,
-CardH1,
-CardText,
-} from './ProjectsElements'
+import React,{useEffect, useState} from 'react'
 import { makeStyles, responsiveFontSizes } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -18,7 +10,10 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import ImageSlider from './ImageSlider';
 import {Project3Data} from './SliderData';
-
+import {AnimatePresence, AnimateSharedLayout, motion} from 'framer-motion';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Items } from './Items/Items';
+import { List } from './Items/List';
 
 
 const useStyles = makeStyles({
@@ -48,67 +43,45 @@ const useStyles = makeStyles({
     },
 });
 
+const Store = ({match}) => {
+  let { id } = match.params;
+  const imageHasLoaded = true;
+
+  return (
+    <>
+      <List selectedId={id} />
+      <AnimatePresence>
+        {id && imageHasLoaded && <Items id={id} key="items" />}
+      </AnimatePresence>
+    </>
+  )
+}
+
+
+
 const Projects = () => {
   useEffect(()=> {
       Aos.init({duration:2000});
   })
+    const [selectedId, setSelectedId] = useState(null);
     const classes = useStyles();
+
+
     return (
-        <ProjectContainer id="portfolio">
-            <ProjectWrapper>
-              <div data-aos="fade-up">
-              <ProjectContent>
-                  <ProjectH1>
-                        {<br/>}My projects
-                  </ProjectH1>
-                  <ProjectCardContainer>
-                      <Card className={classes.root}>
-                       <CardContent className={classes.cardC}>
-                        <CardH1>
-                          Project 1
-                        </CardH1>
-                        <CardText>
-                         {<br/>}
-                         </CardText>
-                         <ImageSlider slides={Project3Data}/>
-                       </CardContent>
-                       <CardActions className={classes.cardA}>
-                         <Button variant="contained" color="primary" size="small" className={classes.pos}>Learn More</Button>
-                       </CardActions>
-                     </Card>
-                      <Card className={classes.root}>
-                       <CardContent className={classes.cardC}>
-                        <CardH1>
-                          Project 2
-                        </CardH1>
-                        <CardText>
-                         {<br/>}
-                         </CardText>
-                         <ImageSlider slides={Project3Data}/>
-                       </CardContent>
-                       <CardActions className={classes.cardA}>
-                         <Button variant="contained" color="primary" size="small" className={classes.pos}>Learn More</Button>
-                       </CardActions>
-                     </Card>
-                     <Card className={classes.root}>
-                       <CardContent className={classes.cardC}>
-                        <CardH1>
-                          My portfolio
-                        </CardH1>
-                        <CardText>
-                         {<br/>}
-                         </CardText>
-                         <ImageSlider slides={Project3Data}/>
-                       </CardContent>
-                       <CardActions className={classes.cardA}>
-                         <Button variant="contained" color="primary" size="small" className={classes.pos}>Learn More</Button>
-                       </CardActions>
-                     </Card>
-                  </ProjectCardContainer>
-              </ProjectContent>
+      <div className="cont" id="portfolio">
+              <div>
+              <h1 className="styledh1">Portfolio</h1>
               </div>
-            </ProjectWrapper>
-        </ProjectContainer>
+              <div className="container">
+                 <div data-aos="fade-up" >
+                 <AnimateSharedLayout type="crossfade">
+                    <Router>
+                    <Route path={["/:id", "/"]} component={Store} />
+                    </Router>
+                    </AnimateSharedLayout>
+                </div>
+              </div>
+      </div>
     )
 }
 

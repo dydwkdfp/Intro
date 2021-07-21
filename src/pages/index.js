@@ -10,6 +10,9 @@ import Footer from '../components/Footer';
 import Aos from "aos";
 import "aos/dist/aos.css";
 
+
+
+
 const Home = () => {
     const [isOpen,setIsOpen] = useState(false)
 
