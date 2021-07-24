@@ -8,9 +8,9 @@ export const homeObjTwo = {
     topLine:'Skills',
     headline: 'Web development',
     descriptionone: `From majoring a computerscience i did lots of diffrent projects ( like building drones from scratch ) needing ability to learn new things by myself on internet.
-     I am confident with these kind of front-end skills but i also can do AWS , git, Photoshop, etc. 
-     Also by working at a Ecommerce company and I was able to experience Product page designing, Management of sellers pages.
-      Making me familiar with how Ecommerce works` ,
+     I am confident with these kind of front-end skills but i also can use AWS , git, Photoshop, etc. 
+     Also by working at a Ecommerce company I was able to experience Product page designing, Management of sellers pages.
+      Making me familiar with how Ecommerce works. I also have customer service experience from working at hotel.` ,
     imgStart: true,
     alt: 'skills',
     dark: true,

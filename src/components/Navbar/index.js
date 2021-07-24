@@ -26,7 +26,7 @@ const Navbar = () => {
                         </NavItem>
                         <NavItem>
                             <NavLinks to="portfolio" smooth={true} duration={500} spy={true}>
-                                portfolio
+                                Portfolio
                             </NavLinks>
                         </NavItem>
                     </NavMenu>

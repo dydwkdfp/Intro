@@ -46,39 +46,20 @@ export const items = [
     },
     {
       id: "c",
-      title: "Flower Site",
+      title: "Weather",
       pointOfInterest: 120,
       backgroundColor: "#959684",
-      text:"",
+      text:"simple website using external API",
       link:'http://localhost:3000/',
       skills1 :[{
-        skill: "framer-motion",
+        skill: "external Api",
           },
           {
-        skill: "Styled-components",
-          },
-          {
-        skill: "React-route-dom",
-          },
-          {
-        skill: "material-ui",
+        skill: "Axios",
           }
-        ]
-    },
-  ];
-  export const skills1 =[{
-    skill: "framer-motion",
-      },
-      {
-    skill: "Styled-components",
-      },
-      {
-    skill: "React-route-dom",
-      },
-      {
-    skill: "material-ui",
-      }
-    ];
+  ]
+},
+];
 
   export const openSpring = { type: "spring", stiffness: 200, damping: 30 };
 
